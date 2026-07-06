@@ -1,40 +1,45 @@
-function register(cb) {
- setTimeout(()=>{ console.log("register Here ");},2000);
- cb();
+function register(cb){
+    setTimeout(()=>{
+     console.log("Register Here");
+     cb();
+    },8000)
+    
 }
-function sendEmail(cb) {
-  setTimeout(() => {
-    console.log("Send Email");
-  }, 2000);
-  cb();
+function sendEmail(cb){
+    setTimeout(()=>{
+      console.log("Send Email");
+      cb();
+    },2000)
+    
 }
-function login(cb) {
-    setTimeout(()=>{ console.log("Login here");},2000);
- cb();
+function login(cb){
+    setTimeout(()=>{
+       console.log("Login Here");
+       cb();
+    },1500)
+  
+}
+function getData(cb){
+    setTimeout(()=>{
+console.log("fetch data");
+cb();
+    },4000)
+    
+}
+function displayData(){
+    setTimeout(()=>{
+    console.log("Display Data");
+    },3000)
+    
 }
 
-function getData(cb) {
-  setTimeout(() => {
-    console.log("getData here");
-  }, 2000);
-  cb();
-}
-// function fetchData(cb) {
-//   setTimeout(() => {
-//     console.log("fetchData here");
-//   }, 3000);
-//   cb();
-// }
-function displayData() {
-  console.log("displayData here");
-}
 
-register(() => {
-  sendEmail(() => {
-    login(() =>
-      getData(() => {
-        displayData();
-      }),
-    );
-  });
+register(()=>{
+       sendEmail(()=>{
+            login(()=>{
+                getData(()=>{
+                    displayData();
+                })
+            });
+       });
 });
