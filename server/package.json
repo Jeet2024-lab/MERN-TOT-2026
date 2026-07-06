@@ -1,0 +1,18 @@
+{
+  "name": "server",
+  "version": "1.0.0",
+  "description": "my first MERN Project",
+  "keywords": [
+    "reactjs",
+    "mongodb",
+    "express",
+    "node"
+  ],
+  "license": "ISC",
+  "author": "jitendra kumar chauhan",
+  "type": "module",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  }
+}
