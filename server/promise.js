@@ -46,7 +46,7 @@ setTimeout(()=>{
 }
 
 // callback hell
-register().then(sendEmail).then(login).then(getData).then(displayData).catch((err)=>{console.log("error",err.message)})
+register().then(sendEmail).then(login).then(getData).then(displayData).catch((err)=>{console.log("error",err)})
 
 console.log("call other Application");
     
