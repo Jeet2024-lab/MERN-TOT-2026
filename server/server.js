@@ -50,7 +50,8 @@ res.end(JSON.stringify(user));
     req.on("data",(chunk)=>{ body+=chunk;});
     req.on("end",()=>{ const data=JSON.parse(body);
 const newUser={
-      id:data.id,
+      // id:data.id,
+      id: Math.floor(Math.random() * 100) + 1,
       name:data.name,
       email:data.email
     }
