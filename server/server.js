@@ -43,7 +43,24 @@ if(!user){
 }
 res.end(JSON.stringify(user));
   } 
-  
+  else if(url=="/create" && method=="POST")
+  {
+    let body="";
+ 
+    req.on("data",(chunk)=>{ body+=chunk;});
+    req.on("end",()=>{ const data=JSON.parse(body);
+const newUser={
+      id:data.id,
+      name:data.name,
+      email:data.email
+    }
+userdata.push(newUser);
+    });
+    
+
+res.statusCode=201;
+res.end("user created successfully");
+  }
   else {
     res.statusCode = 404;
     res.end("Error Page");
