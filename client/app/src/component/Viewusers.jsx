@@ -19,14 +19,14 @@ console.log(res.data.userdata);
   };
   return (
     <div>
-      <h1 className="text-center text-2xl bold">List of Users</h1>
-      <table border="1px" className=" table-auto bg-blue-200 border overflow-x-auto border-seperate text-center w-full rounded-lg border">
+      <h1 className="text-center text-3xl bold">List of Users</h1>
+      <table border="1px" className=" hover:bg-white-300 table-auto bg-blue-200 border overflow-x-auto border-seperate text-center w-full rounded-lg border">
         <thead className="bold text-2xl">
           <tr>
-            <td>SNo.</td>
-            <td>Name</td>
-            <td>Email</td>
-            <td>Action</td>
+            <th className="p-3 border">SNo.</th>
+            <th className="p-3 border">Name</th>
+            <th className="p-3 border">Email</th>
+            <th className="p-3 border">Action</th>
           </tr>
         </thead>
         <tbody>
@@ -34,12 +34,13 @@ console.log(res.data.userdata);
                 users.length>0?(
                     users.map((u,index)=>(
                        <tr>
-                        <td>{u.id}</td>
-                        <td>{u.name}</td>
-                        <td>{u.email}</td>
-                        <td>
-                            <button>Edit</button>
-                            <button>
+                        <td className="p-3 border">{u.id}</td>
+                        <td className="p-3 border">{u.name}</td>
+                        <td className="p-3 border">{u.email}</td>
+                        <td className="p-3 border">
+                            <button className="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2  my-1 rounded transition duration-300">Edit</button>
+        &nbsp;
+                            <button className="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded transition duration-300 my-1">
                                 Delete
                             </button>
                         </td>
