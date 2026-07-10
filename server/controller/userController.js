@@ -5,7 +5,7 @@ export const createUser=async (req,res)=>{
 
     try{
 const {name,email}=req.body;
-console.log("name:",name);
+// console.log("name:",name);
 
 const newUser={
     id:Date.now(),
